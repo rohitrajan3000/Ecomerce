@@ -5,24 +5,22 @@ import TextField from '@mui/material/TextField';
 import * as React from 'react';
 
 import { useState } from 'react';
-
 import { useNavigate } from 'react-router-dom';
+
 import img1 from '../assets/1.png';
 
 
-function CutomerLogin() {
+function CutomerSignup() {
     const [count, setCount] = useState(0);
     const navigate = useNavigate();
+  
 
-    const handlecustomersignup =()=> {
-        navigate('/customersignup');
-      };
+    const handlecustomerlogin =()=> {
+        navigate('/customerlogin');
+    };
     const handlesellerlogin =()=> {
         navigate('/sellerlogin');
-      };
-      const handellogin =()=> {
-        navigate('/customerhome');
-      };
+    };
 
     return (
         <div>
@@ -70,8 +68,17 @@ function CutomerLogin() {
 
                                         },
                                     }} />
-                                <Button sx={{ width: '250px', color: '#1564c1', backgroundColor: 'white', borderRadius: '10px' }} color="grey" variant="contained" onClick={handellogin}>Shoppers Login</Button>
-                                <span style={{color:'white',fontSize:'17px',textDecoration:'underline',cursor:'pointer'}} onClick={handlecustomersignup}>Create Account</span>
+                                <TextField id="outlined-basic" label="Re-Enter Password" variant="outlined"
+                                    InputProps={{
+                                        style: {
+                                            borderRadius: '10px',
+                                            backgroundColor: "white",
+                                            width:'400px'
+
+                                        },
+                                    }} />
+                                <Button sx={{ width: '250px', color: '#1564c1', backgroundColor: 'white', borderRadius: '10px' }} color="grey" variant="contained" >Shoppers Login</Button>
+                                <span style={{color:'white',fontSize:'17px',textDecoration:'underline',cursor:'pointer'}} onClick={handlecustomerlogin}>Customer Login</span>
 
                             </Box>
 
@@ -84,4 +91,4 @@ function CutomerLogin() {
     );
 }
 
-export default CutomerLogin;
+export default CutomerSignup;

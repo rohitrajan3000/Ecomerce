@@ -1,33 +1,40 @@
-import { Table, TableBody, TableCell, TableRow } from '@mui/material';
-import Button from '@mui/material/Button';
 import * as React from 'react';
 import { useState } from 'react';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import './App.css';
-import img1 from './assets/1.png';
-import img2 from './assets/2.png';
+import Home from './Home';
+import CustomerHome from './customer/CustomerHome';
 import CustomerLogin from './customer/CustomerLogin';
-
+import CutomerSignup from './customer/CustomerSignup';
+import AddProduct from './seller/AddProduct';
+import SellerHome from './seller/SellerHome';
+import SellerLogin from './seller/SellerLogin';
+import SellerSignup from './seller/SellerSignup';
 
 function App() {
   const [count, setCount] = useState(0);
+  const navigate = useNavigate();
+
+  const handleUserClick =()=> {
+    navigate('/customerlogin');
+    
+};
 
   return (
     <div>
-      <Table>
-        <TableBody>
-          <TableRow sx={{display:'flex'}}>
-            <TableCell sx={{ bgcolor: '#e2f2fc', height: '95vh', width:'50%', display:'flex', justifyContent:'center', alignItems:'center',  flexDirection:'column'}}>
-              <img src={img1} alt="" style={{height:'400px'}}/>
-              <Button sx={{width:'250px',bgcolor:'#1564c1',color:'#e2f2fc'}} variant="contained">Contained</Button>
-            </TableCell>
-            <TableCell sx={{ bgcolor: '#1564c1', height: '95vh', width:'50%', display:'flex', justifyContent:'center', alignItems:'center' , flexDirection:'column'}}>
-              <img src={img2} alt="" style={{height:'400px'}}/>
-              <Button sx={{width:'250px',bgcolor:'#e2f2fc',color:'blue'}} variant="contained" >Contained</Button>
-            </TableCell>
-          </TableRow>
-        </TableBody>
-      </Table>
-      <CustomerLogin/>
+     
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/customerlogin' element={<CustomerLogin />} />
+        <Route path='/sellerlogin' element={<SellerLogin />} />
+        <Route path='/customersignup' element={<CutomerSignup />} />
+        <Route path='/sellersignup' element={<SellerSignup />} />
+        <Route path='/customerhome' element={<CustomerHome />} />
+        <Route path='/sellerhome' element={<SellerHome />} />
+        <Route path='/addproduct' element={<AddProduct />} />
+        
+      </Routes>
+      
     </div>
   );
 }
