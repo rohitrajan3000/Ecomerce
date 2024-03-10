@@ -24,6 +24,9 @@ export default function SellerHome() {
                                 <Button sx={{ width: '250px', color: 'white', backgroundColor: '#1564c1', borderRadius: '10px' }} color="grey" variant="contained" onClick={handleaddproduct}>Shoppers Login</Button>
 
                             </div>
+                            <div style={{overflow:'auto',height:'80vh'}}>
+                            <h1>hiiiiiiiiii</h1><h1>hiiiiiiiiii</h1><h1>hiiiiiiiiii</h1><h1>hiiiiiiiiii</h1><h1>hiiiiiiiiii</h1><h1>hiiiiiiiiii</h1><h1>hiiiiiiiiii</h1><h1>hiiiiiiiiii</h1><h1>hiiiiiiiiii</h1><h1>hiiiiiiiiii</h1><h1>hiiiiiiiiii</h1><h1>hiiiiiiiiii</h1><h1>hiiiiiiiiii</h1><h1>hiiiiiiiiii</h1><h1>hiiiiiiiiii</h1><h1>hiiiiiiiiii</h1><h1>hiiiiiiiiii</h1><h1>hiiiiiiiiii</h1><h1>hiiiiiiiiii</h1><h1>hiiiiiiiiii</h1><h1>hiiiiiiiiii</h1>
+                            </div>
                         </TableCell>
                     </TableRow>
                 </TableBody>

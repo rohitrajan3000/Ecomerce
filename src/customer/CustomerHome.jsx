@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 
 import CarouselTwoImg from '../assets/4.png';
 import CarouselThreeImg from '../assets/5.png';
-import CarouselOneImg from '../assets/aa.png';
+import CarouselOneImg from '../assets/bb.png';
 
 
 import { useNavigate } from "react-router-dom";

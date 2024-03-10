@@ -2,17 +2,13 @@ import { Button, Table, TableBody, TableCell, TableRow } from '@mui/material';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import React from 'react';
-import Navbarr from '../Navbarr';
+import Navbarr from "../Navbarr";
 
 
-
-
-
-export default function AddProduct() {
+export default function EditProduct() {
 
     return (
         <div>
-            hii
             <Navbarr />
             <Table>
                 <TableBody>
